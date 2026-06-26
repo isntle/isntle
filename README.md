@@ -43,7 +43,7 @@
 
 <br />
 
-I build AI-driven systems and full-stack products — in hackathons, academic research, and on my own. Currently open to internships, fellowships, and exchange programs (Madrid, 2027).
+I build AI-driven systems and full-stack products — in hackathons, academic research, and on my own. Currently open to internships, fellowships, and exchange programs.
 
 ### Recently shipped
 
