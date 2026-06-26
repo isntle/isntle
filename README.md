@@ -8,6 +8,25 @@
 
 <i>"I build things that actually work in production."</i>
 
+<br />
+<br />
+
+<a href="https://www.linkedin.com/in/luismeridadeleon/?skipRedirect=true" target="_blank">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" width="22" height="22" alt="LinkedIn" />
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://www.credly.com/users/luismeridadeleon/badges" target="_blank">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/credly.svg" width="22" height="22" alt="Credly" />
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://portfolio-luis-merida.vercel.app" target="_blank">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/vercel.svg" width="22" height="22" alt="Portfolio" />
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="mailto:luismerid7@gmail.com">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/gmail.svg" width="22" height="22" alt="Email" />
+</a>
+
 </div>
 
 <br />
@@ -33,6 +52,18 @@ I build AI-driven systems and full-stack products — in hackathons, academic re
 
 —
 
-### Reach me
+<div align="center">
 
-[Email](mailto:luismerid7@gmail.com) · [LinkedIn](https://www.linkedin.com/in/luismeridadeleon/?skipRedirect=true) · [Credly](https://www.credly.com/users/luismeridadeleon/badges)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=isntle&show_icons=true&hide_border=true&theme=dark&bg_color=00000000&title_color=ffffff&text_color=c9c9c9&icon_color=ffffff" />
+  <img src="https://github-readme-stats.vercel.app/api?username=isntle&show_icons=true&hide_border=true&theme=default&bg_color=00000000&title_color=0a0a0a&text_color=444444&icon_color=0a0a0a" alt="GitHub stats" width="48%" />
+</picture>
+
+<br />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=isntle&hide_border=true&bg_color=00000000&color=ffffff&line=ffffff&point=ffffff&area=true&area_color=ffffff" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=isntle&hide_border=true&bg_color=ffffff&color=0a0a0a&line=0a0a0a&point=0a0a0a&area=true&area_color=0a0a0a" alt="Activity graph" width="90%" />
+</picture>
+
+</div>
