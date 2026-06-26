@@ -12,19 +12,31 @@
 <br />
 
 <a href="https://www.linkedin.com/in/luismeridadeleon/?skipRedirect=true" target="_blank">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" width="22" height="22" alt="LinkedIn" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/icons/linkedin-white.svg" />
+    <img src="assets/icons/linkedin-black.svg" width="22" height="22" alt="LinkedIn" />
+  </picture>
 </a>
 &nbsp;&nbsp;&nbsp;
 <a href="https://www.credly.com/users/luismeridadeleon/badges" target="_blank">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/credly.svg" width="22" height="22" alt="Credly" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/icons/credly-white.svg" />
+    <img src="assets/icons/credly-black.svg" width="22" height="22" alt="Credly" />
+  </picture>
 </a>
 &nbsp;&nbsp;&nbsp;
 <a href="https://portfolio-luis-merida.vercel.app" target="_blank">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/vercel.svg" width="22" height="22" alt="Portfolio" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/icons/vercel-white.svg" />
+    <img src="assets/icons/vercel-black.svg" width="22" height="22" alt="Portfolio" />
+  </picture>
 </a>
 &nbsp;&nbsp;&nbsp;
 <a href="mailto:luismerid7@gmail.com">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/gmail.svg" width="22" height="22" alt="Email" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/icons/gmail-white.svg" />
+    <img src="assets/icons/gmail-black.svg" width="22" height="22" alt="Email" />
+  </picture>
 </a>
 
 </div>
@@ -32,8 +44,6 @@
 <br />
 
 I build AI-driven systems and full-stack products — in hackathons, academic research, and on my own. Currently open to internships, fellowships, and exchange programs (Madrid, 2027).
-
-—
 
 ### Recently shipped
 
@@ -44,13 +54,9 @@ I build AI-driven systems and full-stack products — in hackathons, academic re
 
 → **[Full portfolio](https://portfolio-luis-merida.vercel.app)**
 
-—
-
 ### Stack
 
 `TypeScript` · `Python` · `Next.js` · `FastAPI` · `React` · `PostgreSQL` · `C`
-
-—
 
 <div align="center">
 
