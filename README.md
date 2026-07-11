@@ -61,15 +61,15 @@ I build AI-driven systems and full-stack products — in hackathons, academic re
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=isntle&show_icons=true&hide_border=true&theme=dark&bg_color=00000000&title_color=ffffff&text_color=c9c9c9&icon_color=ffffff" />
-  <img src="https://github-readme-stats.vercel.app/api?username=isntle&show_icons=true&hide_border=true&theme=default&bg_color=00000000&title_color=0a0a0a&text_color=444444&icon_color=0a0a0a" alt="GitHub stats" width="48%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=isntle&show_icons=true&hide_border=true&theme=transparent&title_color=ffffff&text_color=c9c9c9&icon_color=ffffff&rank_icon=github" />
+  <img src="https://github-readme-stats.vercel.app/api?username=isntle&show_icons=true&hide_border=true&theme=transparent&title_color=0a0a0a&text_color=444444&icon_color=0a0a0a&rank_icon=github" alt="GitHub stats" width="48%" />
 </picture>
 
 <br />
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=isntle&hide_border=true&bg_color=00000000&color=ffffff&line=ffffff&point=ffffff&area=true&area_color=ffffff" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=isntle&hide_border=true&bg_color=ffffff&color=0a0a0a&line=0a0a0a&point=0a0a0a&area=true&area_color=0a0a0a" alt="Activity graph" width="90%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=isntle&hide_border=true&bg_color=transparent&color=ffffff&line=ffffff&point=ffffff&area=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=isntle&hide_border=true&bg_color=transparent&color=444444&line=444444&point=444444&area=true" alt="Activity graph" width="90%" />
 </picture>
 
 </div>
