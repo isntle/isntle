@@ -1,3 +1,4 @@
+import base64
 import json
 import os
 import urllib.request
@@ -13,8 +14,6 @@ THEMES = {
         "accent": "#e86c42",
         "accent_soft": "rgba(232, 108, 66, 0.16)",
         "line": "#ececec",
-        "area_top": "rgba(236, 236, 236, 0.14)",
-        "area_bot": "rgba(236, 236, 236, 0.0)",
     },
     "light": {
         "bg": "#fafafa",
@@ -26,13 +25,43 @@ THEMES = {
         "accent": "#c85a32",
         "accent_soft": "rgba(200, 90, 50, 0.12)",
         "line": "#111215",
-        "area_top": "rgba(17, 18, 21, 0.10)",
-        "area_bot": "rgba(17, 18, 21, 0.0)",
     },
 }
 
-OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "assets", "graphics")
+ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
+OUT_DIR = os.path.join(ROOT_DIR, "assets", "graphics")
+FONTS_DIR = os.path.join(ROOT_DIR, "assets", "fonts")
 os.makedirs(OUT_DIR, exist_ok=True)
+
+
+def load_font_b64(filename):
+    path = os.path.join(FONTS_DIR, filename)
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode("ascii")
+
+
+def build_font_css(include_serif=True, include_sans=True, include_mono=True):
+    rules = []
+    if include_serif:
+        c_norm = load_font_b64("cormorant-normal.woff2")
+        c_ital = load_font_b64("cormorant-italic.woff2")
+        rules.append(
+            f'@font-face {{ font-family: "Cormorant Garamond"; font-style: normal; font-weight: 300 500; src: url("data:font/woff2;base64,{c_norm}") format("woff2"); }}'
+        )
+        rules.append(
+            f'@font-face {{ font-family: "Cormorant Garamond"; font-style: italic; font-weight: 300 500; src: url("data:font/woff2;base64,{c_ital}") format("woff2"); }}'
+        )
+    if include_sans:
+        geist = load_font_b64("geist.woff2")
+        rules.append(
+            f'@font-face {{ font-family: "Geist"; font-style: normal; font-weight: 300 500; src: url("data:font/woff2;base64,{geist}") format("woff2"); }}'
+        )
+    if include_mono:
+        jb = load_font_b64("jetbrains-mono.woff2")
+        rules.append(
+            f'@font-face {{ font-family: "JetBrains Mono"; font-style: normal; font-weight: 300 400; src: url("data:font/woff2;base64,{jb}") format("woff2"); }}'
+        )
+    return "\n    ".join(rules)
 
 
 def fetch_github_data():
@@ -85,12 +114,14 @@ def fetch_github_data():
 
 
 def gen_hero(theme_name, t):
+    fonts = build_font_css(include_serif=True, include_sans=True, include_mono=True)
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 168" width="100%" role="img" aria-label="Luis Mérida — AI Engineer, Systems Programmer &amp; Founder">
   <style>
-    .mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10.5px; letter-spacing: 0.14em; fill: {t["muted"]}; }}
-    .serif {{ font-family: Georgia, "Times New Roman", serif; font-size: 46px; font-weight: 400; fill: {t["text"]}; letter-spacing: -0.02em; }}
+    {fonts}
+    .mono {{ font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 10px; font-weight: 400; letter-spacing: 0.14em; fill: {t["muted"]}; }}
+    .serif {{ font-family: "Cormorant Garamond", Georgia, serif; font-size: 50px; font-weight: 300; fill: {t["text"]}; letter-spacing: -0.02em; }}
     .serif-it {{ font-style: italic; }}
-    .sub {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; fill: {t["muted"]}; }}
+    .sub {{ font-family: "Geist", -apple-system, sans-serif; font-size: 13.5px; font-weight: 300; fill: {t["muted"]}; letter-spacing: -0.005em; }}
     @keyframes pulse {{
       0%, 100% {{ opacity: 1; transform: scale(1); }}
       50% {{ opacity: 0.35; transform: scale(1.45); }}
@@ -121,13 +152,13 @@ def gen_hero(theme_name, t):
 
   <!-- Top metadata bar -->
   <text x="32" y="34" class="mono">ENGINEER ID · LM-2026 · CDMX</text>
-  <circle cx="624" cy="30" r="5" fill="{t["accent_soft"]}" class="dot-pulse"/>
-  <circle cx="624" cy="30" r="2.5" fill="{t["accent"]}"/>
-  <text x="636" y="34" class="mono">BUILDING RELAY &amp; FYTIC</text>
+  <circle cx="614" cy="30" r="5" fill="{t["accent_soft"]}" class="dot-pulse"/>
+  <circle cx="614" cy="30" r="2.5" fill="{t["accent"]}"/>
+  <text x="626" y="34" class="mono">BUILDING RELAY &amp; FYTIC</text>
 
   <!-- Main editorial title -->
-  <text x="32" y="92" class="serif">Luis <tspan class="serif-it">Mérida</tspan></text>
-  <text x="32" y="122" class="sub">AI Engineer · Systems Programmer · Founder — building things that actually work in production.</text>
+  <text x="32" y="94" class="serif">Luis <tspan class="serif-it">Mérida</tspan></text>
+  <text x="32" y="123" class="sub">AI Engineer · Systems Programmer · Founder — building things that actually work in production.</text>
 
   <!-- Bottom animated signal track -->
   <line x1="32" y1="146" x2="808" y2="146" stroke="{t["border"]}" stroke-width="1"/>
@@ -139,12 +170,14 @@ def gen_hero(theme_name, t):
 
 
 def gen_architecture(theme_name, t):
+    fonts = build_font_css(include_serif=False, include_sans=True, include_mono=True)
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 200" width="100%" role="img" aria-label="Engineering Architecture Loop">
   <style>
-    .mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; letter-spacing: 0.12em; fill: {t["muted"]}; }}
-    .title {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: {t["text"]}; }}
-    .desc {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11.5px; fill: {t["muted"]}; }}
-    .tag {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; fill: {t["accent"]}; }}
+    {fonts}
+    .mono {{ font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9.2px; font-weight: 400; letter-spacing: 0.12em; fill: {t["muted"]}; }}
+    .title {{ font-family: "Geist", -apple-system, sans-serif; font-size: 14px; font-weight: 500; fill: {t["text"]}; letter-spacing: -0.01em; }}
+    .desc {{ font-family: "Geist", -apple-system, sans-serif; font-size: 11.5px; font-weight: 300; fill: {t["muted"]}; }}
+    .tag {{ font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9.5px; font-weight: 400; fill: {t["accent"]}; }}
     @keyframes flow {{
       0% {{ stroke-dashoffset: 24; }}
       100% {{ stroke-dashoffset: 0; }}
@@ -219,6 +252,9 @@ def gen_stats_and_activity(data):
     weekly = [sum(d["contributionCount"] for d in w["contributionDays"]) for w in weeks]
     max_w = max(weekly) or 1
 
+    fonts_stats = build_font_css(include_serif=True, include_sans=True, include_mono=True)
+    fonts_act = build_font_css(include_serif=False, include_sans=False, include_mono=True)
+
     for theme_name, t in THEMES.items():
         # 1. Stats + Languages SVG
         bar_x = 340
@@ -244,10 +280,11 @@ def gen_stats_and_activity(data):
 
         stats_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 156" width="100%" role="img" aria-label="GitHub Telemetry and Language Stack">
   <style>
-    .mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; letter-spacing: 0.12em; fill: {t["muted"]}; }}
-    .num {{ font-family: Georgia, "Times New Roman", serif; font-size: 34px; font-weight: 400; fill: {t["text"]}; }}
-    .lbl {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: {t["muted"]}; }}
-    .leg {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: 500; fill: {t["text"]}; }}
+    {fonts_stats}
+    .mono {{ font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9.2px; font-weight: 400; letter-spacing: 0.12em; fill: {t["muted"]}; }}
+    .num {{ font-family: "Cormorant Garamond", Georgia, serif; font-size: 38px; font-weight: 300; fill: {t["text"]}; letter-spacing: -0.02em; }}
+    .lbl {{ font-family: "Geist", -apple-system, sans-serif; font-size: 11px; font-weight: 300; fill: {t["muted"]}; }}
+    .leg {{ font-family: "Geist", -apple-system, sans-serif; font-size: 11.5px; font-weight: 400; fill: {t["text"]}; }}
     @keyframes reveal {{
       0% {{ transform: scaleX(0); }}
       100% {{ transform: scaleX(1); }}
@@ -294,7 +331,8 @@ def gen_stats_and_activity(data):
 
         activity_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 162" width="100%" role="img" aria-label="52-Week Contribution Activity">
   <style>
-    .mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; letter-spacing: 0.12em; fill: {t["muted"]}; }}
+    {fonts_act}
+    .mono {{ font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9.2px; font-weight: 400; letter-spacing: 0.12em; fill: {t["muted"]}; }}
     @keyframes draw {{
       0% {{ stroke-dashoffset: 1600; }}
       100% {{ stroke-dashoffset: 0; }}
@@ -316,7 +354,7 @@ def gen_stats_and_activity(data):
   <rect x="0.5" y="0.5" width="839" height="161" rx="14" fill="{t["bg"]}" stroke="{t["border"]}"/>
 
   <text x="32" y="30" class="mono">CONTRIBUTION PULSE · 52 WEEKS</text>
-  <text x="640" y="30" class="mono">PEAK: {max_w}/WK · TOTAL: {total_cal}</text>
+  <text x="618" y="30" class="mono">PEAK: {max_w}/WK · TOTAL: {total_cal}</text>
 
   <!-- Subtle gridlines -->
   <line x1="{gx}" y1="{gy + gh * 0.25:.1f}" x2="{gx + gw}" y2="{gy + gh * 0.25:.1f}" stroke="{t["border"]}" stroke-dasharray="2 4"/>
@@ -340,7 +378,7 @@ def main():
         gen_hero(theme_name, t)
         gen_architecture(theme_name, t)
     gen_stats_and_activity(data)
-    print("Generated all SVGs successfully!")
+    print("Regenerated all SVGs with embedded Cormorant Garamond, Geist & JetBrains Mono!")
 
 
 if __name__ == "__main__":
