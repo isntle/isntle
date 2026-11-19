@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 168" width="100%" role="img" aria-label="Luis Mérida — AI Engineer, Systems Programmer &amp; Founder">
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10.5px; letter-spacing: 0.14em; fill: #8c8c92; }
+    .serif { font-family: Georgia, "Times New Roman", serif; font-size: 46px; font-weight: 400; fill: #ececec; letter-spacing: -0.02em; }
+    .serif-it { font-style: italic; }
+    .sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; fill: #8c8c92; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(1.45); }
+    }
+    @keyframes sweep {
+      0% { stroke-dashoffset: 840; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes scan {
+      0% { transform: translateX(-120px); opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translateX(840px); opacity: 0; }
+    }
+    .dot-pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-in-out infinite; }
+    .wave-line { stroke-dasharray: 840; animation: sweep 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .scanner { animation: scan 5.5s linear infinite; }
+  </style>
+  <defs>
+    <linearGradient id="scanGrad-dark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e86c42" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e86c42" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e86c42" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="839" height="167" rx="14" fill="#161618" stroke="#2e2e33"/>
+
+  <!-- Top metadata bar -->
+  <text x="32" y="34" class="mono">ENGINEER ID · LM-2026 · CDMX</text>
+  <circle cx="624" cy="30" r="5" fill="rgba(232, 108, 66, 0.16)" class="dot-pulse"/>
+  <circle cx="624" cy="30" r="2.5" fill="#e86c42"/>
+  <text x="636" y="34" class="mono">BUILDING RELAY &amp; FYTIC</text>
+
+  <!-- Main editorial title -->
+  <text x="32" y="92" class="serif">Luis <tspan class="serif-it">Mérida</tspan></text>
+  <text x="32" y="122" class="sub">AI Engineer · Systems Programmer · Founder — building things that actually work in production.</text>
+
+  <!-- Bottom animated signal track -->
+  <line x1="32" y1="146" x2="808" y2="146" stroke="#2e2e33" stroke-width="1"/>
+  <path class="wave-line" d="M 32 146 L 280 146 L 292 146 L 298 139 L 304 152 L 310 143 L 316 146 L 808 146" fill="none" stroke="#8c8c92" stroke-width="1.2" opacity="0.7"/>
+  <rect class="scanner" x="0" y="144.8" width="90" height="2.4" rx="1.2" fill="url(#scanGrad-dark)"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 200" width="100%" role="img" aria-label="Engineering Architecture Loop">
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; letter-spacing: 0.12em; fill: #737373; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #0a0a0a; }
+    .desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11.5px; fill: #737373; }
+    .tag { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; fill: #c85a32; }
+    @keyframes flow {
+      0% { stroke-dashoffset: 24; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes breathe {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 1; }
+    }
+    .stream { stroke-dasharray: 4 4; animation: flow 1.1s linear infinite; }
+    .n1 { animation: breathe 3.2s ease-in-out infinite 0s; }
+    .n2 { animation: breathe 3.2s ease-in-out infinite 1s; }
+    .n3 { animation: breathe 3.2s ease-in-out infinite 2s; }
+  </style>
+
+  <rect x="0.5" y="0.5" width="839" height="199" rx="14" fill="#fafafa" stroke="#e5e5e5"/>
+  <text x="28" y="30" class="mono">HOW I ARCHITECT SYSTEMS · HYBRID EDGE + AGENTIC RUNTIME + HARDENED INFRA</text>
+
+  <!-- Node 1: On-Device / Edge -->
+  <rect x="28" y="48" width="234" height="124" rx="10" fill="#ffffff" stroke="#e5e5e5"/>
+  <circle cx="46" cy="68" r="3" fill="#c85a32" class="n1"/>
+  <text x="56" y="71" class="mono">01 · EDGE &amp; ON-DEVICE</text>
+  <text x="44" y="96" class="title">Zero-Cost Determinism</text>
+  <text x="44" y="116" class="desc">Local inference, normalization</text>
+  <text x="44" y="132" class="desc">&amp; offline persistence.</text>
+  <text x="44" y="156" class="tag">Sentinel · Hincha · ONE</text>
+
+  <!-- Connector 1 -> 2 -->
+  <line x1="262" y1="110" x2="303" y2="110" stroke="#c85a32" stroke-width="1.5" class="stream"/>
+  <polygon points="299,106 306,110 299,114" fill="#c85a32"/>
+
+  <!-- Node 2: Agentic Runtime -->
+  <rect x="303" y="48" width="234" height="124" rx="10" fill="#ffffff" stroke="#e5e5e5"/>
+  <circle cx="321" cy="68" r="3" fill="#c85a32" class="n2"/>
+  <text x="331" y="71" class="mono">02 · AGENTIC RUNTIME</text>
+  <text x="319" y="96" class="title">Bounded Autonomy</text>
+  <text x="319" y="116" class="desc">Code-checked mandates, voice</text>
+  <text x="319" y="132" class="desc">agents &amp; human handoff.</text>
+  <text x="319" y="156" class="tag">Relay · FyTic · Ghost Shopper</text>
+
+  <!-- Connector 2 -> 3 -->
+  <line x1="537" y1="110" x2="578" y2="110" stroke="#c85a32" stroke-width="1.5" class="stream"/>
+  <polygon points="574,106 581,110 574,114" fill="#c85a32"/>
+
+  <!-- Node 3: Hardened Infra -->
+  <rect x="578" y="48" width="234" height="124" rx="10" fill="#ffffff" stroke="#e5e5e5"/>
+  <circle cx="596" cy="68" r="3" fill="#c85a32" class="n3"/>
+  <text x="606" y="71" class="mono">03 · HARDENED SYSTEMS</text>
+  <text x="594" y="96" class="title">Production &amp; POSIX</text>
+  <text x="594" y="116" class="desc">Multi-tenant RLS, local LLMs</text>
+  <text x="594" y="132" class="desc">&amp; low-level C systems.</text>
+  <text x="594" y="156" class="tag">CleanOps · Ronald's · Minishell</text>
+</svg>

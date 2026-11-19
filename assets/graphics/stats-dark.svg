@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 156" width="100%" role="img" aria-label="GitHub Telemetry and Language Stack">
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9.5px; letter-spacing: 0.12em; fill: #8c8c92; }
+    .num { font-family: Georgia, "Times New Roman", serif; font-size: 34px; font-weight: 400; fill: #ececec; }
+    .lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: #8c8c92; }
+    .leg { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: 500; fill: #ececec; }
+    @keyframes reveal {
+      0% { transform: scaleX(0); }
+      100% { transform: scaleX(1); }
+    }
+    .bar-wrap { transform-origin: 340px 72px; animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  </style>
+  <rect x="0.5" y="0.5" width="839" height="155" rx="14" fill="#161618" stroke="#2e2e33"/>
+
+  <!-- Left: Metrics -->
+  <text x="32" y="34" class="mono">GITHUB TELEMETRY · @ISNTLE</text>
+  <text x="32" y="92" class="num">711</text>
+  <text x="32" y="114" class="lbl">Contributions (52w)</text>
+
+  <text x="148" y="92" class="num">225</text>
+  <text x="148" y="114" class="lbl">Commits</text>
+
+  <text x="242" y="92" class="num">39</text>
+  <text x="242" y="114" class="lbl">Repos</text>
+
+  <line x1="312" y1="28" x2="312" y2="128" stroke="#2e2e33"/>
+
+  <!-- Right: Languages -->
+  <text x="340" y="34" class="mono">TOP LANGUAGES BY VOLUME</text>
+  <g class="bar-wrap">
+    <rect x="340" y="68" width="263.7" height="8" rx="2" fill="#3178c6"/><rect x="603.7" y="68" width="79.8" height="8" rx="2" fill="#f1e05a"/><rect x="683.5" y="68" width="45.3" height="8" rx="2" fill="#e34c26"/><rect x="728.8" y="68" width="25.2" height="8" rx="2" fill="#3572A5"/><rect x="754.0" y="68" width="54.0" height="8" rx="2" fill="#336790"/>
+  </g>
+  <circle cx="344" cy="100" r="3.5" fill="#3178c6"/><text x="354" y="104" class="leg">TypeScript <tspan fill="#8c8c92">56.3%</tspan></text><circle cx="502" cy="100" r="3.5" fill="#f1e05a"/><text x="512" y="104" class="leg">JavaScript <tspan fill="#8c8c92">17.0%</tspan></text><circle cx="660" cy="100" r="3.5" fill="#e34c26"/><text x="670" y="104" class="leg">HTML <tspan fill="#8c8c92">9.7%</tspan></text><circle cx="344" cy="124" r="3.5" fill="#3572A5"/><text x="354" y="128" class="leg">Python <tspan fill="#8c8c92">5.4%</tspan></text><circle cx="502" cy="124" r="3.5" fill="#336790"/><text x="512" y="128" class="leg">PLpgSQL <tspan fill="#8c8c92">4.6%</tspan></text>
+</svg>
