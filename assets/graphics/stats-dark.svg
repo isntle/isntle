@@ -18,10 +18,10 @@
 
   <!-- Left: Metrics -->
   <text x="32" y="34" class="mono">GITHUB TELEMETRY · @ISNTLE</text>
-  <text x="32" y="92" class="num">734</text>
+  <text x="32" y="92" class="num">739</text>
   <text x="32" y="114" class="lbl">Contributions (52w)</text>
 
-  <text x="148" y="92" class="num">248</text>
+  <text x="148" y="92" class="num">252</text>
   <text x="148" y="114" class="lbl">Commits</text>
 
   <text x="242" y="92" class="num">10</text>
@@ -32,7 +32,7 @@
   <!-- Right: Languages -->
   <text x="340" y="34" class="mono">TOP LANGUAGES BY VOLUME</text>
   <g class="bar-wrap">
-    <rect x="340" y="68" width="234.5" height="8" rx="2" fill="#3178c6"/><rect x="574.5" y="68" width="63.1" height="8" rx="2" fill="#e34c26"/><rect x="637.6" y="68" width="56.2" height="8" rx="2" fill="#3572A5"/><rect x="693.8000000000001" y="68" width="47.0" height="8" rx="2" fill="#f1e05a"/><rect x="740.8000000000001" y="68" width="67.2" height="8" rx="2" fill="#336790"/>
+    <rect x="340" y="68" width="241.9" height="8" rx="2" fill="#3178c6"/><rect x="581.9" y="68" width="61.1" height="8" rx="2" fill="#e34c26"/><rect x="643.0" y="68" width="54.4" height="8" rx="2" fill="#3572A5"/><rect x="697.4" y="68" width="45.5" height="8" rx="2" fill="#f1e05a"/><rect x="742.9" y="68" width="65.1" height="8" rx="2" fill="#336790"/>
   </g>
-  <circle cx="344" cy="100" r="3.5" fill="#3178c6"/><text x="354" y="104" class="leg">TypeScript <tspan fill="#8c8c92">50.1%</tspan></text><circle cx="502" cy="100" r="3.5" fill="#e34c26"/><text x="512" y="104" class="leg">HTML <tspan fill="#8c8c92">13.5%</tspan></text><circle cx="660" cy="100" r="3.5" fill="#3572A5"/><text x="670" y="104" class="leg">Python <tspan fill="#8c8c92">12.0%</tspan></text><circle cx="344" cy="124" r="3.5" fill="#f1e05a"/><text x="354" y="128" class="leg">JavaScript <tspan fill="#8c8c92">10.0%</tspan></text><circle cx="502" cy="124" r="3.5" fill="#336790"/><text x="512" y="128" class="leg">PLpgSQL <tspan fill="#8c8c92">8.9%</tspan></text>
+  <circle cx="344" cy="100" r="3.5" fill="#3178c6"/><text x="354" y="104" class="leg">TypeScript <tspan fill="#8c8c92">51.7%</tspan></text><circle cx="502" cy="100" r="3.5" fill="#e34c26"/><text x="512" y="104" class="leg">HTML <tspan fill="#8c8c92">13.0%</tspan></text><circle cx="660" cy="100" r="3.5" fill="#3572A5"/><text x="670" y="104" class="leg">Python <tspan fill="#8c8c92">11.6%</tspan></text><circle cx="344" cy="124" r="3.5" fill="#f1e05a"/><text x="354" y="128" class="leg">JavaScript <tspan fill="#8c8c92">9.7%</tspan></text><circle cx="502" cy="124" r="3.5" fill="#336790"/><text x="512" y="128" class="leg">PLpgSQL <tspan fill="#8c8c92">8.6%</tspan></text>
 </svg>
